@@ -1,0 +1,137 @@
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.Toolkit;
+import javax.swing.JLabel;
+import java.awt.BorderLayout;
+import javax.swing.ImageIcon;
+import java.awt.Color;
+import javax.swing.JTextField;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+import javax.swing.JTextPane;
+import javax.swing.JSeparator;
+import java.awt.Window.Type;
+import javax.swing.DropMode;
+import javax.swing.JPasswordField;
+import javax.swing.JRadioButton;
+import javax.swing.JCheckBox;
+
+public class INSTAGRAM_UI {
+
+	private JFrame frame;
+	private JPasswordField passwordField;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					INSTAGRAM_UI window = new INSTAGRAM_UI();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public INSTAGRAM_UI() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setType(Type.POPUP);
+		frame.getContentPane().setBackground(new Color(255, 0, 255));
+		frame.setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\x\\Downloads\\pngtree-instagram-icon-png-image_6315974.png"));
+		frame.setBounds(100, 100, 260, 400);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel lblInstagram = new JLabel("New label");
+		lblInstagram.setIcon(new ImageIcon("C:\\Users\\x\\Downloads\\output-onlinepngtools.png"));
+		lblInstagram.setBounds(55, 38, 134, 44);
+		frame.getContentPane().add(lblInstagram);
+		
+		JButton btnLogIn = new JButton("Log In");
+		btnLogIn.setBackground(new Color(0, 128, 255));
+		btnLogIn.setFont(new Font("Arial", Font.BOLD, 11));
+		btnLogIn.setForeground(new Color(255, 255, 255));
+		btnLogIn.setBounds(23, 193, 197, 23);
+		frame.getContentPane().add(btnLogIn);
+		
+		JLabel lblForgotPassword = new JLabel("Forgot Password?");
+		lblForgotPassword.setForeground(new Color(255, 255, 255));
+		lblForgotPassword.setFont(new Font("Arial", Font.PLAIN, 10));
+		lblForgotPassword.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblForgotPassword.setBounds(121, 163, 99, 20);
+		frame.getContentPane().add(lblForgotPassword);
+		
+		JSeparator separator = new JSeparator();
+		separator.setBounds(22, 239, 84, 2);
+		frame.getContentPane().add(separator);
+		
+		JSeparator separator_1 = new JSeparator();
+		separator_1.setBounds(136, 239, 84, 2);
+		frame.getContentPane().add(separator_1);
+		
+		JLabel lblNewLabel = new JLabel("OR");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 10));
+		lblNewLabel.setBounds(105, 227, 30, 26);
+		frame.getContentPane().add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("  Log in with Faceboook");
+		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 11));
+		lblNewLabel_1.setForeground(new Color(0, 128, 255));
+		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\x\\Downloads\\download (1).jpg"));
+		lblNewLabel_1.setBounds(23, 252, 197, 49);
+		frame.getContentPane().add(lblNewLabel_1);
+		
+		JLabel lblShow = new JLabel("Show");
+		lblShow.setForeground(new Color(102, 102, 102));
+		lblShow.setFont(new Font("Tahoma", Font.BOLD, 10));
+		lblShow.setBounds(187, 138, 30, 20);
+		frame.getContentPane().add(lblShow);
+		
+		JLabel lblNewLabel_2 = new JLabel("  Password");
+		lblNewLabel_2.setFont(new Font("Arial", Font.PLAIN, 8));
+		lblNewLabel_2.setForeground(new Color(128, 128, 128));
+		lblNewLabel_2.setBounds(23, 134, 53, 20);
+		frame.getContentPane().add(lblNewLabel_2);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(23, 138, 197, 20);
+		frame.getContentPane().add(passwordField);
+		
+		JLabel lblNewLabel_2_1 = new JLabel("  Phone number, username, or email");
+		lblNewLabel_2_1.setForeground(Color.GRAY);
+		lblNewLabel_2_1.setFont(new Font("Arial", Font.PLAIN, 8));
+		lblNewLabel_2_1.setBounds(23, 107, 139, 13);
+		frame.getContentPane().add(lblNewLabel_2_1);
+		
+		textField = new JTextField();
+		textField.setBounds(23, 107, 197, 20);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JLabel lblNewLabel_3 = new JLabel("New label");
+		lblNewLabel_3.setIcon(new ImageIcon("C:\\Users\\x\\Downloads\\272200857_4686664818095300_1242704759968710139_n.png"));
+		lblNewLabel_3.setBounds(-62, 0, 306, 361);
+		frame.getContentPane().add(lblNewLabel_3);
+		frame.setVisible(true);
+	}
+}
